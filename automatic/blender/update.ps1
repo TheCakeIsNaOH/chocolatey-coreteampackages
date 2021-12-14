@@ -3,19 +3,16 @@
 $releases = 'https://www.blender.org/download/'
 $softwareName = 'Blender'
 
-function global:au_BeforeUpdate { Get-RemoteFiles -Purge -NoSuffix }
+function global:au_BeforeUpdate { 
+    $Latest.Checksum64 = Get-RemoteChecksum $Latest.URL64 
+}
 
 function global:au_SearchReplace {
   @{
-    ".\legal\VERIFICATION.txt" = @{
-      "(?i)(^\s*location on\:?\s*)\<.*\>" = "`${1}<$releases>"
-      "(?i)(\s*64\-Bit Software.*)\<.*\>" = "`${1}<$($Latest.URL64)>"
-      "(?i)(^\s*checksum\s*type\:).*" = "`${1} $($Latest.ChecksumType64)"
-      "(?i)(^\s*checksum64\:).*" = "`${1} $($Latest.Checksum64)"
-    }
     ".\tools\chocolateyInstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
-      "(?i)(^\s*file64\s*=\s*`"[$]toolsPath\\).*" = "`${1}$($Latest.FileName64)`""
+      "(?i)^(\s*url64\s*=\s*)'.*'"        = "`${1}'$($Latest.URL64)'"
+      "(?i)^(\s*checksum64\s*=\s*)'.*'"   = "`${1}'$($Latest.Checksum64)'"
     }
     ".\tools\chocolateyUninstall.ps1" = @{
       "(?i)^(\s*softwareName\s*=\s*)'.*'" = "`${1}'$softwareName'"
