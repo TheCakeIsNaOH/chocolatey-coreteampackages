@@ -30,6 +30,32 @@
 */ffmpeg-full*        @VuiMuich
 */etcd*               @dgalbraith
 */octave.portable*    @dgalbraith
+*/7zip*               @TheCakeIsNaOH
+*/autohotkey*         @TheCakeIsNaOH
+*/blender*            @TheCakeIsNaOH
+*/bulk-crap-uninstaller* @TheCakeIsNaOH
+*/calibre*            @TheCakeIsNaOH
+*/curl*               @TheCakeIsNaOH
+*/cutepdf*            @TheCakeIsNaOH
+*/everything*         @TheCakeIsNaOH
+*/ffmpeg*             @TheCakeIsNaOH
+*/gimp*               @TheCakeIsNaOH
+*/gnupg*              @TheCakeIsNaOH
+*/inkscape*           @TheCakeIsNaOH
+*/mono*               @TheCakeIsNaOH
+*/notepadplusplus*    @TheCakeIsNaOH
+*/putty*              @TheCakeIsNaOH
+*/python*             @TheCakeIsNaOH
+*/qbittorrent*        @TheCakeIsNaOH
+*/rapidee*            @TheCakeIsNaOH
+*/rufus*              @TheCakeIsNaOH
+*/sysinternals*       @TheCakeIsNaOH
+*/thunderbird*        @TheCakeIsNaOH
+*/vcredist*           @TheCakeIsNaOH
+*/vlc*                @TheCakeIsNaOH
+*/wget*               @TheCakeIsNaOH
+*/wincdemu*           @TheCakeIsNaOH
+*/youtube-dl*         @TheCakeIsNaOH
 
 # Other
 # This can be any file other that won't be matched as a package
