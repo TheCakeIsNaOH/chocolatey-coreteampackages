@@ -13,7 +13,7 @@
 
 */ruby.portable*      @chocolatey-community/chocolatey-team-maintainers
 */python*             @chocolatey-community/chocolatey-team-maintainers
-*/calibre*            @gep13 @AdmiringWorm
+*/calibre*            @gep13 @AdmiringWorm @TheCakeIsNaOH
 */cdburnerxp*         @gep13
 */poweriso*           @gep13
 */rdcman*             @gep13
@@ -32,6 +32,34 @@
 */etcd*               @dgalbraith
 */octave.portable*    @dgalbraith
 */selenium-gecko-driver* @hansnull @chocolatey-community/chocolatey-team-maintainers
+*/7zip*               @TheCakeIsNaOH
+*/audacity*           @TheCakeIsNaOH
+*/avidemux*           @TheCakeIsNaOH
+*/curl*               @TheCakeIsNaOH
+*/cutepdf*            @TheCakeIsNaOH
+*/everything*         @TheCakeIsNaOH
+*/firefox*            @TheCakeIsNaOH
+*/gimp*               @TheCakeIsNaOH
+*/inkscape*           @TheCakeIsNaOH
+*/keepassxc*          @TheCakeIsNaOH
+*/krita*              @TheCakeIsNaOH
+*/mkdocs*             @TheCakeIsNaOH
+*/mkdocs-material*    @TheCakeIsNaOH
+*/mono*               @TheCakeIsNaOH
+*/mp3tag*             @TheCakeIsNaOH
+*/notepadplusplus*    @TheCakeIsNaOH
+*/picard*             @TheCakeIsNaOH
+*/putty*              @TheCakeIsNaOH
+*/qbittorrent*        @TheCakeIsNaOH
+*/rapidee*            @TheCakeIsNaOH
+*/rufus*              @TheCakeIsNaOH
+*/sysinternals*       @TheCakeIsNaOH
+*/thunderbird*        @TheCakeIsNaOH
+*/virtualbox*         @TheCakeIsNaOH
+*/vlc*                @TheCakeIsNaOH
+*/wget*               @TheCakeIsNaOH
+*/wincdemu*           @TheCakeIsNaOH
+*/youtube-dl*         @TheCakeIsNaOH
 
 # Other
 # This can be any file other that won't be matched as a package
