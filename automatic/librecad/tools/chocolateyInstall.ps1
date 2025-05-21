@@ -6,6 +6,7 @@ $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
   file           = "$toolsPath\LibreCAD-Installer-2.2.0.2.exe"
+  file64         = "$toolsPath\LibreCAD-Installer-2.2.0.2.exe"
   softwareName   = 'LibreCAD'
   silentArgs     = '/S'
   validExitCodes = @(0)

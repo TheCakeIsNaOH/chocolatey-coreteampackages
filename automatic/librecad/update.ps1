@@ -40,13 +40,29 @@ function global:au_GetLatest {
 
     $version = Get-Version $_.tag_name
 
-    $url = $_.assets | Where-Object browser_download_url -match '\.exe$' | Select-Object -ExpandProperty browser_download_url
+    # Try to get x64 url
+    # if not, drop to x32 stream only
+    # if yes, get x64 items
+    # add check to throw if newer version does not have x64 url
+    $asset64 = $_.assets | Where-Object browser_download_url -match '-win64\.exe$'
+    if ($null -ne $asset64) {
+        $url64 = $asset64 | Select-Object -ExpandProperty browser_download_url
+        $url = $_.assets | Where-Object browser_download_url -match '.exe$' | Where-Object browser_download_url -notlike '*-win64.exe' | Select-Object -ExpandProperty browser_download_url
+    } else {
+        if ($version -ge "2.2.1.0") {
+            Throw "64-bit executable not found in release assets"
+        }
+        $url = $_.assets | Where-Object browser_download_url -match '\.exe$' | Select-Object -ExpandProperty browser_download_url
+        $url64 = $null
+    }
+
     $streamName = $version.ToString(2)
 
     if (!($streams.ContainsKey($streamName)) -and $url) {
       $streams.Add($streamName, @{
         Version      = $version
         URL32        = $url
+        URL64        = $url64
         ReleaseNotes = $_.body
         ReleaseUrl   = $_.html_url
       })
